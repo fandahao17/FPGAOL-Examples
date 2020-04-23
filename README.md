@@ -6,7 +6,7 @@ FPGAOL v1.1是FPGAOL的最近一次更新。在本次更新中，我们增加了
 
 ## 开关与LED
 
-<img src="img/ledsw.png" alt="Screen Shot 2020-04-23 at 8.51.58 AM" style="zoom:50%;" />
+<img src="img/ledsw.png" alt="Screen Shot 2020-04-23 at 8.51.58 AM" width="300" />
 
 FPGAOL v1.1的开关与LED部分与FPGAOL v1.0相比没有变化，管脚的对应关系为：
 
@@ -22,11 +22,11 @@ FPGAOL v1.1的开关与LED部分与FPGAOL v1.0相比没有变化，管脚的对�
 
 ### 示例程序
 
-LED和SW部分的示例程序直接将开关与LED相连，开关的变化将直接体现在LED上。
+LED和SW部分的[示例程序](./ledsw)直接将开关与LED相连，开关的变化将直接体现在LED上。
 
 ## 七段数码管🔢
 
-<img src="img/7seg.png" alt="Screen Shot 2020-04-23 at 8.52.29 AM" style="zoom: 50%;" />
+<img src="img/7seg.png" alt="Screen Shot 2020-04-23 at 8.52.29 AM" width="600" />
 
 数码管分为hex_play和seg_play两部分，实验时我们主要用到的是hex_play。
 
@@ -62,7 +62,7 @@ while true:
 
 为了弥补hex_play不能按段来显示数字的缺陷，我们提供了seg_play，它是支持通过段来控制的一位数码管。为了节约管脚，它的控制信号是与LED共享的，可以通过LED的信号来控制它，具体的对应关系如下：
 
-<img src="img/segplay.png" alt="Screen Shot 2020-04-23 at 8.58.59 AM" style="zoom:33%;" />
+<img src="img/segplay.png" alt="Screen Shot 2020-04-23 at 8.58.59 AM" width="150" />
 
 | 数码管 |  A   |  B   |  C   |  D   |  E   |  F   |  G   | 小数点 |
 | :----: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :----: |
@@ -70,7 +70,7 @@ while true:
 
 ### 示例程序
 
-七段数码管的示例程序是一个以秒为单位的16进制计时器，当SW0为0时该计时器递增，反之则递减。
+七段数码管的[示例程序](./seg)是一个以秒为单位的16进制计时器，当SW0为0时该计时器递增，反之则递减。
 
 ## UART
 
@@ -82,7 +82,7 @@ TBA
 
 ## 软时钟与按钮🔘
 
-<img src="img/button.png" alt="Screen Shot 2020-04-23 at 8.52.40 AM" style="zoom:50%;" />
+<img src="img/button.png" alt="Screen Shot 2020-04-23 at 8.52.40 AM" width="300" />
 
 FPGAOL计划提供一个速度比较慢的由软件驱动的时钟，以免去同学们给FPGA板载时钟降频的麻烦，但本版本的FPGAOL并没有提供该功能。
 
@@ -94,15 +94,15 @@ FPGAOL计划提供一个速度比较慢的由软件驱动的时钟，以免去�
 
 ## 生成波形图
 
-<img src="img/wf_btn.png" style="zoom:50%;" />
+<img src="img/wf_btn.png" width="250" />
 
 在FPGAOL v1.0中，我们提供了一个实时刷新的波形图，但它的显示效果一般，最终成为了一个鸡肋的功能。在新版本中，我们去掉了这个实时波形图，转而将对FPGA的采样结果直接存储为**vcd**格式的波形文件，可以通过[GTKWave](http://gtkwave.sourceforge.net)等软件打开，遗憾的是vivado没有提供查看vcd文件的功能。
 
-<img src="img/wf.png" alt="Screen Shot 2020-04-23 at 9.38.56 AM" style="zoom: 50%;" />
+<img src="img/wf.png" alt="Screen Shot 2020-04-23 at 9.38.56 AM" width="600" />
 
 目前，该波形图的采样间隔为**5 us**，希望它能为同学们**调试程序**、助教**远程检查实验**等提供便利。本文作者在前不久就通过该波形图锁定了我们的测试比特流中存在的bug，所以我认为如果使用得当，这有可能成为FPGAOL的一个*killer feature*。
 
 ## Help Needed!
 
-尽管我们一直努力地完善FPGAOL的功能，但目前仍有很多不尽如人意的地方。如果你对这个平台如何工作很感兴趣，或是有好的点子，或是想让学弟学妹不再为玄学的硬件实验而发愁，欢迎[联系我们](fandahao17@mail.ustc.edu.cn)，和我们一起改进这个平台！
+尽管我们一直努力地完善FPGAOL的功能，但目前仍有很多不尽如人意的地方。如果你对这个平台如何工作很感兴趣，或是有好的点子，或是想让学弟学妹不再为玄学的硬件实验而发愁，欢迎联系我们，和我们一起改进这个平台！
 
