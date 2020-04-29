@@ -20,7 +20,7 @@ FPGAOL采用了典型的Master-Worker的架构，一个**中心服务器**负责
 
 FPGAOL的网络拓扑是一个树形结构，如下图所示：
 
-<img src="img/topo.png" alt="Network Topology" width="400" />
+<img src="img/topo.PNG" alt="Network Topology" width="400" />
 
 尽管用户和树莓派之间的通信流量很小（1kb/s），但用户上传比特流的大小约为4MB，因此，一旦出现很多用户同时上传比特流的情况，网络的瓶颈处（汇聚交换机和接入交换机之间的百兆网）可能形成拥塞，**这会使得其他用户和树莓派间的实时通信出现丢包、卡顿**，严重影响服务质量，主要有以下两个解决方法：
 
