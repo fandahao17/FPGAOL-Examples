@@ -1,5 +1,7 @@
 # FPGAOL v1.1 使用说明
 
+**本文档已被迁移至[这里](https://git.ustc.edu.cn/hexuustc/fpgaol-examples)**
+
 [FPGAOL](https://fpgaol.ustc.edu.cn)是由中国科大计算机教学实验中心组织开发的、基于Web端的线上硬件实验平台。用户可以远程访问我们部署好的FPGA（[Nexys 4 DDR](https://reference.digilentinc.com/reference/programmable-logic/nexys-4-ddr/start))集群，上传本地生成好的比特流文件，并交互地控制FPGA，实时获得FPGA的输出。因为该结果是实际运行而非仿真产生的，所以可以确保其与线下操作FPGA是相同的。同时，由于线上设备具备出色的采样性能，能够精确发现人眼难以观察到的信号变化，FPGAOL平台能为用户快速调试程序提供便利。
 
 <img src="img/page.png" alt="Home page" width="500" />
